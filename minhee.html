@@ -21,7 +21,9 @@
     </textarea>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
-      
+      $(document).ready(function() {
+        $("#next").trigger("click");
+      });
 
       $('#show').click(function(){
         $('.answer').toggle();
@@ -35,10 +37,10 @@
         $('.test').text(obj.test);
         $('.answer').text(obj.answer);
 
-        $('.answer').hide();
-
         $(".test").height(1).height( $(".test").prop('scrollHeight')+12 );
         $(".answer").height(1).height( $(".answer").prop('scrollHeight')+12 );
+
+        $('.answer').hide();
 
       });
 
