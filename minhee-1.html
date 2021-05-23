@@ -9,6 +9,7 @@
     </style>
   </head>
   <body>
+    <h1>행정학개</h1>
     <div class="description">
     </div>
     <textarea class="test" style="width:100%; word-break:break-all;word-wrap:break-word;">
@@ -26,7 +27,13 @@
       });
 
       $('#show').click(function(){
-        $('.answer').toggle();
+        if($(".answer").is(':visible') == false) { 
+          $(".answer").css('visibility', 'hidden');
+        } else { 
+          $(".answer").css('visibility', 'visible');
+          
+        }
+
       });
 
       $('#next').click(function(){
@@ -40,8 +47,7 @@
         $(".test").height(1).height( $(".test").prop('scrollHeight')+12 );
         $(".answer").height(1).height( $(".answer").prop('scrollHeight')+12 );
 
-        $('.answer').hide();
-
+        $(".answer").css('visibility', 'hidden');
       });
 
       function shuffle(array) {
