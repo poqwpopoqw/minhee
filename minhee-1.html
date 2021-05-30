@@ -6,21 +6,23 @@
     <style type="text/css">
       ul li {list-style:none; border:1px solid #000; padding:20px; background-color:#fff;}
       ul li.over {background-color:red;}
+      html, body { overscroll-behavior-y: contain; }
     </style>
   </head>
   <body>
     <h1>행정학개론</h1>
     <h1><div class="description"></h1>
     </div>
-    <textarea class="test" style="width:100%;font-size: 17px; word-break:break-all;word-wrap:break-word;">
+    <textarea class="test" style="width:100%;font-size: 17px; word-break:break-all;word-wrap:break-word;" readonly="true">
       문제  
     </textarea>
     <button id="show" style="font-size: 30px">정답 및 해설 보기</button>
     <button id="next" style="font-size: 30px">다음</button>
-    <textarea class="answer" style="width:100%;font-size: 17px; word-break:break-all;word-wrap:break-word;">
+    <textarea class="answer" style="width:100%;font-size: 17px; word-break:break-all;word-wrap:break-word;" readonly="true">
       해설  
     </textarea>
-    <img id="happy" src='1.jpeg' style="width:50%">
+    <img id="happy" src='1.jpeg' style="width:50%;display: none;">
+    
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
       var id;
